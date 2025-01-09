@@ -1,0 +1,19 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: func.rem(24);
+  padding-bottom: func.rem(24);
+  font-size: func.rem(12);
+
+  & > p {
+    margin-bottom: func.rem(1);
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

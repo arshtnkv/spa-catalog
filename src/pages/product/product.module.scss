@@ -1,0 +1,122 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  padding: func.rem(20);
+  background-color: var(--color-white-default);
+  border-radius: func.rem(8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+  display: flex;
+  gap: func.rem(30);
+
+  @include mixins.tablet-small {
+    flex-direction: column;
+  }
+}
+
+.images {
+  flex: 1;
+
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.thumbnail {
+  display: flex;
+  gap: func.rem(10);
+  margin-top: func.rem(10);
+
+  & > img {
+    width: func.rem(60);
+    height: func.rem(60);
+    border: func.rem(1) solid var( --color-gainsboro);
+    cursor: pointer;
+  }
+}
+
+.detail {
+  flex: 1.5;
+
+  h1 {
+    margin-bottom: func.rem(15);
+  }
+
+  .art {
+    color: var(--color-gainsboro);
+    margin-bottom: func.rem(15);
+  }
+  
+  .price {
+    color: var(--color-night-rider);
+    font-size: func.rem(30);
+    margin-top: func.rem(30);
+    margin-bottom: func.rem(15);
+  }
+
+}
+.paymentInfo {
+  margin-bottom: func.rem(15);
+
+  a {
+    color: var(--color-black-default);
+  }
+}
+
+.options {
+  border-bottom: func.rem(1) solid var( --color-gainsboro);
+  margin-bottom: func.rem(20);
+  padding-bottom: func.rem(20);
+
+  p {
+    font-weight: bold;
+    margin-bottom: func.rem(5);
+  }
+  &_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: func.rem(10);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: func.rem(30);
+  border-bottom: func.rem(1) solid var( --color-gainsboro);
+  margin-bottom: func.rem(20);
+  padding-bottom: func.rem(20);
+}
+
+.info {
+  border-bottom: func.rem(1) solid var( --color-gainsboro);
+  margin-bottom: func.rem(20);
+  padding-bottom: func.rem(20);
+
+  p:not(:last-child) {
+    margin-bottom: func.rem(7);
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.productPrice {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--blue-teal);
+  margin-bottom: func.rem(20);
+}
+

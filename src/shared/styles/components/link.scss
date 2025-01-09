@@ -1,0 +1,22 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+@use '@/shared/styles/variables';
+
+.link {
+  font: inherit;
+  color: inherit;
+  user-select: none;
+
+  &--underline {
+    text-decoration: underline;
+    text-underline-offset: func.rem(4);
+    transition: variables.$transition;
+  
+    @include mixins.desktop-only {
+      &:hover,
+      &:focus-visible {
+        text-decoration-color: var(--color-transparent);
+      }
+    }
+  }
+}

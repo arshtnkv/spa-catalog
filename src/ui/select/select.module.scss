@@ -1,0 +1,27 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+@use '@/shared/styles/variables';
+
+.root {
+  width: 100%;
+  height: func.rem(40);
+  padding: func.rem(10) func.rem(20);
+  font-family: inherit;
+  color: var(--color-black-default);  
+  background-color: var(--color-white-default);
+  border: none;
+  border-radius: func.rem(8);
+  outline: none;
+  transition: variables.$transition;
+  transition-property: border-color, background-color;
+
+  &:focus {
+    border-color: var(--color-primary-default);
+  }
+
+  @include mixins.tablet {
+    height: func.rem(50);
+    padding: func.rem(15) func.rem(20);
+    border-radius: func.rem(8);
+  }
+}

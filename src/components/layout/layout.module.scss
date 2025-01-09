@@ -1,0 +1,26 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  margin-top: func.rem(180);
+  padding-bottom: func.rem(80);
+}
+
+.wrapper {
+  display: flex;
+  
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+}
+
+.content {
+  flex-basis: 0;
+  flex-grow: 999;
+  
+
+  @include mixins.tablet {
+    margin-bottom: func.rem(50);
+  }
+}
+

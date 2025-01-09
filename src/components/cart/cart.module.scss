@@ -1,0 +1,42 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  margin-top: func.rem(50);
+
+  img {
+    max-width: func.rem(50);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      border-bottom: func.rem(1) solid var( --color-gainsboro);
+      margin-bottom: func.rem(20);
+      padding-bottom: func.rem(20);
+    }
+  }
+  
+}
+
+.wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-teal);
+  padding: 0 func.rem(20);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  & > span {
+    @include mixins.text;
+    color: var(--color-black-default);
+    margin-top: func.rem(5);
+  }
+}
+
+

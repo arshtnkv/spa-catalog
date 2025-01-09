@@ -1,0 +1,15 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.quantifier {
+  display: flex;
+  gap: func.rem(10);
+  align-items: center;
+
+  & span {
+    padding: func.rem(9) func.rem(20);
+    border: func.rem(1) solid var(--color-whisper);
+    border-radius: func.rem(5);
+    color: var(--color-night-rider);
+  }
+}

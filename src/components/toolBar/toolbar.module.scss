@@ -1,0 +1,32 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  display: flex;
+  align-items: center;
+  margin-top: func.rem(20);
+  padding: func.rem(24);
+
+  @include mixins.tablet {
+    flex-direction: column-reverse;
+    align-items: normal;
+    padding: 0;
+  }
+}
+
+.root > div {
+  margin-right: func.rem(20);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mixins.tablet {
+    margin-right: 0;
+    margin-bottom: func.rem(10);
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+}

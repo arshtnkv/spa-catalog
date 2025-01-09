@@ -1,0 +1,18 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+@use '@/shared/styles/variables';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: func.rem(2);
+}
+
+.item {
+  margin-right: func.rem(12);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

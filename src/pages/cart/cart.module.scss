@@ -1,0 +1,7 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  padding: func.rem(20);
+  background-color: var(--color-white-default);
+}

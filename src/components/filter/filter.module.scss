@@ -1,0 +1,7 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+@use '@/shared/styles/variables';
+
+.root {
+  min-width: func.rem(200);
+}

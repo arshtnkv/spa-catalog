@@ -1,0 +1,21 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+@use '@/shared/styles/variables';
+
+.root {
+  &_lg {
+    @include mixins.h1;
+  }
+
+  &_md {
+    @include mixins.h2;
+  }
+
+  &_sm {
+    @include mixins.h3;
+  }
+
+  &_xs {
+    @include mixins.h4
+  }
+}

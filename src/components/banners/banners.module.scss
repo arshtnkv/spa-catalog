@@ -1,0 +1,47 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  position: sticky;
+  top: 22%;
+  align-self: start;
+  flex-grow: 1;
+  width: 23.3%;
+  
+  @include mixins.tablet {
+    position: initial;
+    top: unset;
+    width: 100%;
+  }
+  
+  & > div {
+    margin-left: func.rem(30);
+    
+    @include mixins.tablet {
+      margin-left: 0;
+      padding: func.rem(30) 0;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: func.rem(20);
+  
+    & > img {
+      width: 100%;
+    }
+  
+    @include mixins.tablet {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

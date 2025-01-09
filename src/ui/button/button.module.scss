@@ -1,0 +1,66 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+@use '@/shared/styles/variables';
+
+.button {
+  @include mixins.reset-btn;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: func.rem(18);
+  line-height: func.rem(20);
+  color: var(--color-white-default);
+  background-color: var(--blue-whale);
+  border-radius: func.rem(5);
+  cursor: pointer;
+  transition: variables.$transition;
+  transition-property: color, background-color;
+  outline: none;
+  user-select: none;
+
+  @include mixins.desktop-only {
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+
+  &_sm {
+    height: func.rem(40);
+    padding: func.rem(10) func.rem(15);
+  }
+
+  &_md {
+    // height: func.rem(60);
+    padding: func.rem(15) func.rem(30);
+
+    @include mixins.tablet {
+      height: func.rem(50);
+      padding: func.rem(15) func.rem(50);
+    }
+  }
+
+  &_white {
+    color: var(--color-black-default);
+    background-color: inherit;
+    border: func.rem(1) solid var(--color-whisper);
+  }
+  
+  &_red {
+    color: var(--color-white-default);
+    background-color: var(--color-rust);
+  }
+  
+  &_yellow {
+    color: var(--color-white-default);
+    background-color: var(--color-selective-yellow);
+  }
+
+  &:disabled {
+    color: var(--color-black);
+    background-color: var(--color-grey-hover);
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,31 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-size: func.rem(14);
+  margin-bottom: func.rem(20);
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    color: #555;
+
+    &:last-child {
+
+      a {
+
+        cursor: default;
+      }
+  }
+
+    &:not(:last-child)::after {
+      content: '/';
+      margin: 0 8px;
+      color: #ccc;
+    }
+  }
+}

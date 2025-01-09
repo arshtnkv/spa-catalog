@@ -1,0 +1,19 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(func.rem(200), 1fr));
+  column-gap: func.rem(20);
+  row-gap: func.rem(20);
+  padding: 0 func.rem(24);
+
+  @include mixins.tablet {
+    padding: 0;
+    margin-top: func.rem(30);
+  }
+
+  @include mixins.tablet-small {
+    grid-template-columns: repeat(auto-fill, minmax(func.rem(200), 1fr));
+  }
+}

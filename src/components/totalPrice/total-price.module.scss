@@ -1,0 +1,12 @@
+@use '@/shared/styles/func';
+@use '@/shared/styles/mixins';
+
+.totalPrice {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: func.rem(50);
+  font-size: func.rem(25);
+  border-top: func.rem(1) solid var( --color-gainsboro);
+  padding-top: func.rem(40);
+  padding-bottom: func.rem(20);
+}
