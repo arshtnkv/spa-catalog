@@ -1,6 +1,6 @@
 # SPA Catalog
 
-URL: [link.ru](https://link.ru/)
+URL: [https://spa-catalog.vercel.app](https://spa-catalog.vercel.app/)
 
 ![Cover Image](public/image/cover.png)
 
